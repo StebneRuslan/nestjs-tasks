@@ -23,7 +23,7 @@ services:
     image: postgres:latest
     restart: always
     volumes:
-      - ../postgres-data:/var/lib/postgresql/data
+      - ../postgres-data_v1:/var/lib/postgresql/data_v1
     ports:
       - 5432:5432
     expose:
