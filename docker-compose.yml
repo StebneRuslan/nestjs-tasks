@@ -19,11 +19,13 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=pass
       - POSTGRES_DB=nest-tasks
+      - TYPEORM_SYNC=true
+      - JWT_SECRET=topSecret51
   database:
     image: postgres:latest
     restart: always
     volumes:
-      - ../postgres-data_v2:/var/lib/postgresql/data_v2
+      - ../postgres-data_v4:/var/lib/postgresql/data_v4
     ports:
       - 5432:5432
     expose:
